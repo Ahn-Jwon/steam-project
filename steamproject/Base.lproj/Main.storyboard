@@ -33,6 +33,9 @@
                                     <color key="baseForegroundColor" systemColor="opaqueSeparatorColor"/>
                                     <color key="baseBackgroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="VLb-87-vNw" kind="show" id="47P-JX-xi3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="E3c-7L-bTi"/>
@@ -45,7 +48,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WNx-e9-bqM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-25.190839694656489" y="842.95774647887333"/>
+            <point key="canvasLocation" x="-25" y="838"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="dyH-Bm-KFS">
@@ -53,6 +56,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Ofg-CX-Rm8" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5ae-iz-4I1">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -94,14 +98,14 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ck8-4l-fed" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1815" y="-730"/>
+            <point key="canvasLocation" x="1601" y="-717"/>
         </scene>
         <!--Main-->
         <scene sceneID="S6q-L1-wtL">
             <objects>
                 <tableViewController id="VLb-87-vNw" customClass="MainTableViewController" customModule="steamproject" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Q4s-5v-RW7">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -120,10 +124,11 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Main" id="PMS-dJ-kFu"/>
+                    <navigationItem key="navigationItem" id="tBW-Ce-3Ms"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qqu-52-7Dy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1816" y="4"/>
+            <point key="canvasLocation" x="1601" y="4"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="4Pa-An-Oin">
@@ -167,9 +172,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8D0-Qy-qlF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1815" y="843"/>
+            <point key="canvasLocation" x="1601" y="851"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="47P-JX-xi3"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

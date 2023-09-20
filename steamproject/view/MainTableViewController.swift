@@ -10,9 +10,23 @@
 import UIKit
 
 class MainTableViewController: UITableViewController {
-
+    
+    
+    // 최초 테이블 구성하는 화면 (Table View)
+    @IBOutlet var tvListView: UITableView!
+    
+    //제이슨에서 불러온 아이템 변수
+    var feedItem: [DBModel] = []
+ 
+    
+    // 최초 시작값
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // 출발점 (1) 델리게이트 연결한다.
+        let querModel = QueryModel()
+        querModel.delegate = self
+        querModel.dowloadItems()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -22,26 +36,50 @@ class MainTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
+    // 테이블 컬럼의 갯수
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
-
+    
+    // 테이블 높이 지정 heightForRowA (강제 높이 지정)
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
+    }
+    
+    // 테이블의 데이터 수
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return feedItem.count // 아이템의 갯수를 feedItem의 데이터 갯수로 지정한다.
     }
 
-    /*
+    // 테이블을 어디에 노출시킬것인지
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "mycell", for: indexPath)
+        as! MainTableViewCell // 테이블셀의 디자인을 여기서 하기 때문에 이쪽으로 지정 (변수가 이쪽에 있기 떄문)
+        
+        let imageURLString = "http://media.steampowered.com/steamcommunity/public/images/apps/\(feedItem[indexPath.row].appid)/\(feedItem[indexPath.row].simage).jpg"
+        
+        
         // Configure the cell...
-
+        //        let url = URL(string: feedItem[indexPath.row].simage)
+        if let imageURL = URL(string: imageURLString) {
+            DispatchQueue.global().async {
+                if let data = try? Data(contentsOf: imageURL) {
+                    DispatchQueue.main.async {
+                        cell.imgView.image = UIImage(data: data)
+                    }
+                } else {
+                    print("image 데이터 다운로드 실패") // 이미지 데이터 다운로드실패
+                }
+            }
+        } else {
+            print("image url 오류") // 이미지 url 오류
+        }
+        
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -88,4 +126,11 @@ class MainTableViewController: UITableViewController {
     }
     */
 
+} // View Controller
+
+extension MainTableViewController: QueryModelProtocol{
+    func itemDownloaded(items: [DBModel]) {
+        feedItem = items
+        self.tvListView.reloadData()
+    }
 }

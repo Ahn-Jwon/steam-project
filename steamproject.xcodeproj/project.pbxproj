@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C320126A2AB94AAB00DA7360 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32012692AB94AAB00DA7360 /* MainTableViewCell.swift */; };
+		C32012702AB967D200DA7360 /* MainDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C320126F2AB967D200DA7360 /* MainDBModel.swift */; };
+		C32012722AB96A2900DA7360 /* MainQueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32012712AB96A2900DA7360 /* MainQueryModel.swift */; };
+		C32012742AB96D2500DA7360 /* MainJSONModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32012732AB96D2500DA7360 /* MainJSONModel.swift */; };
 		C3BB77922AB7DE52004B0049 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BB77912AB7DE52004B0049 /* AppDelegate.swift */; };
 		C3BB77942AB7DE52004B0049 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BB77932AB7DE52004B0049 /* SceneDelegate.swift */; };
 		C3BB77962AB7DE52004B0049 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BB77952AB7DE52004B0049 /* ViewController.swift */; };
@@ -23,6 +27,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C32012692AB94AAB00DA7360 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		C320126F2AB967D200DA7360 /* MainDBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDBModel.swift; sourceTree = "<group>"; };
+		C32012712AB96A2900DA7360 /* MainQueryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQueryModel.swift; sourceTree = "<group>"; };
+		C32012732AB96D2500DA7360 /* MainJSONModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainJSONModel.swift; sourceTree = "<group>"; };
 		C3BB778E2AB7DE52004B0049 /* steamproject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = steamproject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3BB77912AB7DE52004B0049 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3BB77932AB7DE52004B0049 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +59,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C320126C2AB9678200DA7360 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C320126F2AB967D200DA7360 /* MainDBModel.swift */,
+				C32012712AB96A2900DA7360 /* MainQueryModel.swift */,
+				C32012732AB96D2500DA7360 /* MainJSONModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		C3BB77852AB7DE52004B0049 = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +88,7 @@
 		C3BB77902AB7DE52004B0049 /* steamproject */ = {
 			isa = PBXGroup;
 			children = (
+				C320126C2AB9678200DA7360 /* Model */,
 				C3BB77AF2AB81AFA004B0049 /* view */,
 				C3BB77A52AB7E7BE004B0049 /* images */,
 				C3BB77912AB7DE52004B0049 /* AppDelegate.swift */,
@@ -100,6 +119,7 @@
 				C3BB77B02AB81B3A004B0049 /* OwnTableViewController.swift */,
 				C3BB77B22AB81B88004B0049 /* PickTableViewController.swift */,
 				C3BB77B42AB81BB1004B0049 /* DetailViewController.swift */,
+				C32012692AB94AAB00DA7360 /* MainTableViewCell.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -179,12 +199,16 @@
 				C3BB77B52AB81BB1004B0049 /* DetailViewController.swift in Sources */,
 				C3BB77B12AB81B3A004B0049 /* OwnTableViewController.swift in Sources */,
 				C3BB77A92AB7E83E004B0049 /* LoginViewController.swift in Sources */,
+				C32012702AB967D200DA7360 /* MainDBModel.swift in Sources */,
+				C32012742AB96D2500DA7360 /* MainJSONModel.swift in Sources */,
 				C3BB77962AB7DE52004B0049 /* ViewController.swift in Sources */,
+				C320126A2AB94AAB00DA7360 /* MainTableViewCell.swift in Sources */,
 				C3BB77922AB7DE52004B0049 /* AppDelegate.swift in Sources */,
 				C3BB77942AB7DE52004B0049 /* SceneDelegate.swift in Sources */,
 				C3BB77AE2AB7F6A5004B0049 /* MainTableViewController.swift in Sources */,
 				C3BB77B32AB81B88004B0049 /* PickTableViewController.swift in Sources */,
 				C3BB77AC2AB7F49A004B0049 /* MainViewController.swift in Sources */,
+				C32012722AB96A2900DA7360 /* MainQueryModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

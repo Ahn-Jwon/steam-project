@@ -24,6 +24,7 @@
 		C3BB77B12AB81B3A004B0049 /* OwnTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BB77B02AB81B3A004B0049 /* OwnTableViewController.swift */; };
 		C3BB77B32AB81B88004B0049 /* PickTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BB77B22AB81B88004B0049 /* PickTableViewController.swift */; };
 		C3BB77B52AB81BB1004B0049 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BB77B42AB81BB1004B0049 /* DetailViewController.swift */; };
+		C3E1C9852ABAD559006F51A4 /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = C3E1C9842ABAD559006F51A4 /* login.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		C3BB77B02AB81B3A004B0049 /* OwnTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnTableViewController.swift; sourceTree = "<group>"; };
 		C3BB77B22AB81B88004B0049 /* PickTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickTableViewController.swift; sourceTree = "<group>"; };
 		C3BB77B42AB81BB1004B0049 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		C3E1C9842ABAD559006F51A4 /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 		C3BB77A52AB7E7BE004B0049 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				C3E1C9842ABAD559006F51A4 /* login.png */,
 				C3BB77A62AB7E80E004B0049 /* loginView.png */,
 			);
 			path = images;
@@ -183,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3BB77A72AB7E80F004B0049 /* loginView.png in Resources */,
+				C3E1C9852ABAD559006F51A4 /* login.png in Resources */,
 				C3BB779E2AB7DE56004B0049 /* LaunchScreen.storyboard in Resources */,
 				C3BB779B2AB7DE56004B0049 /* Assets.xcassets in Resources */,
 				C3BB77992AB7DE52004B0049 /* Main.storyboard in Resources */,

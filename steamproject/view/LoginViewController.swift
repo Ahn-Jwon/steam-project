@@ -11,8 +11,8 @@ class LoginViewController: UIViewController {
     
     // 로그인 이미지
     @IBOutlet weak var imgView: UIImageView!
-    
-    var imageName = "loginView.png"
+    // 최초 로그인 이미지 변수
+    var imageName = "login.png"
     
     override func viewDidLoad() {
         super.viewDidLoad()

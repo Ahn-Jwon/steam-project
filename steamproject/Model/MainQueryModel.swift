@@ -16,7 +16,7 @@ protocol QueryModelProtocol{
     func itemDownloaded(items: [DBModel]) // 테이블 뷰가 실행시켜서 화면에 노출 시킨다,
 }
 
-// (2)
+// (2) 최초 메인 이미지 (서버 체크 )
 class QueryModel{
     var delegate: QueryModelProtocol! // 옵셔널 체크를 해줘야 한다.
     let urlPath = "http://flask.okrie.kro.kr:5000/getusergames?steamid=76561198155183238" // 서버의 주소

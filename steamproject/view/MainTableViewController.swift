@@ -58,7 +58,8 @@ class MainTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "mycell", for: indexPath)
         as! MainTableViewCell // 테이블셀의 디자인을 여기서 하기 때문에 이쪽으로 지정 (변수가 이쪽에 있기 떄문)
         
-        let imageURLString = "http://media.steampowered.com/steamcommunity/public/images/apps/\(feedItem[indexPath.row].appid)/\(feedItem[indexPath.row].simage).jpg"
+        let imageURLString =
+         "http://media.steampowered.com/steamcommunity/public/images/apps/\(feedItem[indexPath.row].appid)/\(feedItem[indexPath.row].simage).jpg"
         
         
         // Configure the cell...
@@ -128,6 +129,8 @@ class MainTableViewController: UITableViewController {
 
 } // View Controller
 
+
+// JSON Data 연결하기.
 extension MainTableViewController: QueryModelProtocol{
     func itemDownloaded(items: [DBModel]) {
         feedItem = items

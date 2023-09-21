@@ -31,7 +31,7 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Steam Login">
                                     <fontDescription key="titleFontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="19"/>
                                     <color key="baseForegroundColor" systemColor="opaqueSeparatorColor"/>
-                                    <color key="baseBackgroundColor" systemColor="labelColor"/>
+                                    <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="VLb-87-vNw" kind="show" id="47P-JX-xi3"/>
@@ -39,7 +39,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="E3c-7L-bTi"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="user" id="Cev-r8-XuK"/>
                     <connections>
@@ -62,9 +62,9 @@
                         <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="O9S-08-ty4" kind="relationship" relationship="viewControllers" id="EJ7-2Z-UWG"/>
                         <segue destination="VLb-87-vNw" kind="relationship" relationship="viewControllers" id="W0b-Ky-mhE"/>
                         <segue destination="Uxh-yu-B07" kind="relationship" relationship="viewControllers" id="gEV-UI-cie"/>
+                        <segue destination="O9S-08-ty4" kind="relationship" relationship="viewControllers" id="1RP-Mx-xcM"/>
                         <segue destination="JNy-WD-LMa" kind="relationship" relationship="viewControllers" id="5ej-ww-CTP"/>
                     </connections>
                 </tabBarController>
@@ -111,6 +111,10 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="separatorColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="sectionIndexBackgroundColor" systemColor="secondaryLabelColor"/>
+                        <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" id="JtF-96-c2w">
+                            <rect key="frame" x="0.0" y="366" width="393" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </activityIndicatorView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="mycell" rowHeight="288" id="gbm-wg-hTu" customClass="MainTableViewCell" customModule="steamproject" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="393" height="288"/>
@@ -222,6 +226,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

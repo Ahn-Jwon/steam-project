@@ -6,6 +6,8 @@
 //
 
 // Main page Query model
+// JSON 형식을 연결한다.
+
 import Foundation
 
 // ViewModel을 만드는 파일이다.
@@ -17,46 +19,47 @@ protocol QueryModelProtocol{
 }
 
 // (2) 최초 메인 이미지 (서버 체크 )
-class QueryModel{
-    var delegate: QueryModelProtocol! // 옵셔널 체크를 해줘야 한다.
-    let urlPath = "http://flask.okrie.kro.kr:5000/getusergames?steamid=76561198155183238" // 서버의 주소
+class QueryModel {
+    var delegate: QueryModelProtocol!
+    let urlPath = "http://flask.okrie.kro.kr:5000/game/bestgames"
     
-    func dowloadItems(){
-        let url: URL = URL(string: urlPath)!
-        DispatchQueue.global().async {
-            let data = try? Data(contentsOf: url)
-            DispatchQueue.main.async {
-                self.parseJSON(data!)
+    func downloadItems() {
+        if let url = URL(string: urlPath) {
+            let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+                if let error = error {
+                    print("Error: \(error.localizedDescription)")
+                    return
+                }
+                if let data = data {
+                    self.parseJSON(data)
+                }
             }
+            task.resume()
         }
     }
     
-    // 2023.09.19 현재 데이터 안불러온다.
-    // 2023.09.20 데이터 연결 완료.
-    func parseJSON(_ data: Data){
+    func parseJSON(_ data: Data) {
         let decoder = JSONDecoder()
-        var locations: [DBModel] = []
-        
-        do{
-            let mainss = try decoder.decode(game_count.self, from: data)
-            for mains in mainss.games{
-                let query = DBModel(appid: mains.appid, simage: mains.img_icon_url, name: mains.name)
+        do {
+            let appidData = try decoder.decode(AppidJSON.self, from: data)
+            var locations: [DBModel] = []
+
+            for index in 0..<appidData.appid.count {
+                let query = DBModel(
+                    appid: appidData.appid[index],
+                    snmae: appidData.name[index],
+                    sprice: appidData.price[index])
+                
                 locations.append(query)
             }
-            
-            print(mainss.games.count)
-        
-            
-        }catch let error{
-            print("faill: \(error.localizedDescription)")
+
+            DispatchQueue.main.async {
+                self.delegate.itemDownloaded(items: locations)
+            }
+        } catch {
+            print("Error decoding JSON: \(error.localizedDescription)")
         }
-        // 작업
-        DispatchQueue.main.async{
-            self.delegate.itemDownloaded(items: locations)
-        }
-        
     }
-    
 }
 
 

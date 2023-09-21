@@ -26,7 +26,7 @@ class MainTableViewController: UITableViewController {
         // 출발점 (1) 델리게이트 연결한다.
         let querModel = QueryModel()
         querModel.delegate = self
-        querModel.dowloadItems()
+        querModel.downloadItems()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -44,7 +44,7 @@ class MainTableViewController: UITableViewController {
     
     // 테이블 높이 지정 heightForRowA (강제 높이 지정)
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
+        return 200
     }
     
     // 테이블의 데이터 수
@@ -58,12 +58,24 @@ class MainTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "mycell", for: indexPath)
         as! MainTableViewCell // 테이블셀의 디자인을 여기서 하기 때문에 이쪽으로 지정 (변수가 이쪽에 있기 떄문)
         
+        let item = feedItem[indexPath.row]
+        
+//        var content = cell.defaultContentConfiguration()
+       
+//        cell.lbltitle.text = item.appid
+        cell.lblprice.text = item.sname
+        cell.lblappid.text = item.sprice
+       
+
+        
+//        // 이미지 URL 문자열로 변경
         let imageURLString =
-         "http://media.steampowered.com/steamcommunity/public/images/apps/\(feedItem[indexPath.row].appid)/\(feedItem[indexPath.row].simage).jpg"
+        "https://cdn.cloudflare.steamstatic.com/steam/apps/\(feedItem[indexPath.row].appid)/header.jpg"
         
         
-        // Configure the cell...
-        //        let url = URL(string: feedItem[indexPath.row].simage)
+        
+//         Configure the cell...
+//         이미지 문자열을 URL 객체로 변경 후 객체가 유효하면 다운로드하여 테이블뷰에 보여준다.
         if let imageURL = URL(string: imageURLString) {
             DispatchQueue.global().async {
                 if let data = try? Data(contentsOf: imageURL) {

@@ -26,5 +26,7 @@ struct ImgJSON: Codable{
 //StudentJSON은 JSON파일 키 값(이름)과 같아야한다.
     var img_link: String
     var appid : Int
+    var name : String
+    var price: String
 
 }

@@ -23,9 +23,13 @@ class UserModel{
 class IMGModel{
     var img_link : String
     var appid: Int
+    var price: String
+    var name: String
     
-    init(img_link: String, appid: Int) {
+    init(img_link: String, appid: Int, price: String, name: String) {
         self.img_link = img_link
         self.appid = appid
+        self.price = price
+        self.name = name
     }
 }

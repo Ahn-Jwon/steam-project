@@ -25,22 +25,21 @@ class OwnViewController: UIViewController {
                UserListCollectionView.delegate = self
                UserListCollectionView.dataSource = self
         
-        
 }
-    // 상세페이지 넘어가는 데이터 코드
-    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    //        if segue.identifier == "sgDetail" {
-    //            if let cell = sender as? UICollectionViewCell,
-    //               let indexPath = self.UserListCollectionView.indexPath(for: cell) {
-    //                let detailView = segue.destination as! DetailViewController
-    //
-    //                detailView.receivedAppId = dataArray[indexPath.row].appid
-    //                detailView.receivedName = dataArray[indexPath.row].name
-    //                detailView.receivedimgViewPath = dataArray[indexPath.row].img_icon_url
-    //                print(detailView.receivedimgViewPath)
-    //            }
-    //        }
-    //    }
+//     상세페이지 넘어가는 데이터 코드
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "sgDetail" {
+                if let cell = sender as? UICollectionViewCell,
+                   let indexPath = self.UserListCollectionView.indexPath(for: cell) {
+                    let detailView = segue.destination as! OwnDetailViewController
+                    detailView.appid = IMGArray[indexPath.row].appid
+                    detailView.gametitle = IMGArray[indexPath.row].name
+                    detailView.gamePrice = IMGArray[indexPath.row].price
+
+                    detailView.imgURL = "https://cdn.cloudflare.steamstatic.com/steam/apps/\(IMGArray[indexPath.row].appid)/header.jpg"
+                }
+            }
+        }
          
         }//Controller
         
@@ -92,30 +91,29 @@ class OwnViewController: UIViewController {
     }
 
 
-        extension OwnViewController: UICollectionViewDelegateFlowLayout{
-           
-        // 위아래 간격
-        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-            return 0
-        }
-        // 좌우간 간격
-        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-            return 0
-        }
-        
-        // Cell Size (옆 라인을 고려하여 설정)
-        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            let width = collectionView.frame.width / 3 - 1
-            let size = CGSize(width: width, height: width)
-            return size
-        }
-            // 섹션에서 콘텐츠를 배치하는 데 사용되는 여백
-//            func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-//                return UIEdgeInsets(top: 15, left: 10, bottom: 10, right: 10)
-//            }
-        
-       
+extension OwnViewController: UICollectionViewDelegateFlowLayout{
+    
+    // 위아래 간격
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 1
     }
+    // 좌우간 간격
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 1
+    }
+    
+    // Cell Size (옆 라인을 고려하여 설정)
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = collectionView.frame.width / 3 - 1
+        let size = CGSize(width: width, height: width)
+        
+      
+        return size
+    }
+
+    
+}
+   
 
     extension OwnViewController: UserQueryModelProtocol, OwnHeaderImageModelProtocol{
         func GameImageDownloaded(items: [IMGModel]) {
@@ -131,5 +129,6 @@ class OwnViewController: UIViewController {
        
      
         }
-        
+
+
         

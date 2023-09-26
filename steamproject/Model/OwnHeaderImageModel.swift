@@ -65,7 +65,7 @@ class OwnHeaderImageModel {
         do {
             let games = try decoder.decode(Gamecount.self, from: data)
             let game = games.result
-            let query = IMGModel(img_link: game.img_link, appid: game.appid)
+            let query = IMGModel(img_link: game.img_link, appid: game.appid, price: game.price, name: game.name)
             locations.append(query)
             print("성공 3 : \(game.img_link)")
         } catch let error {

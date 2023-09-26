@@ -8,13 +8,28 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
     
+    
+    @IBOutlet weak var dimgView: UIImageView!
+    
+    @IBOutlet weak var appidtest: UILabel!
+    
+    var imgName = ""
+       var appid: String?
+
+       override func viewDidLoad() {
+           super.viewDidLoad()
+
+           // 이미지 표시
+           let url = URL(string: imgName)
+
+           // appid를 UILabel에 표시
+           if let appid = appid {
+               appidtest.text = "App ID: " + appid
+           }
+       }
+   
+//
 
     /*
     // MARK: - Navigation

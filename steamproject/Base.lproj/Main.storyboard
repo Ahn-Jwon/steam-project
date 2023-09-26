@@ -120,6 +120,7 @@
                                     <outlet property="imgView" destination="hMy-8x-R42" id="ZSi-oK-N9O"/>
                                     <outlet property="lblappid" destination="Jdw-9g-tfA" id="8RM-X3-R2Z"/>
                                     <outlet property="lblprice" destination="gjt-rm-qBx" id="sBW-a2-gNp"/>
+                                    <segue destination="vDb-6G-rTG" kind="show" identifier="Detail" id="G8c-mD-ebO"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -136,7 +137,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qqu-52-7Dy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1600.7633587786258" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="1601" y="4"/>
         </scene>
         <!--추천목록-->
         <scene sceneID="q8k-Bz-biG">
@@ -207,15 +208,33 @@
             <objects>
                 <viewController id="vDb-6G-rTG" customClass="DetailViewController" customModule="steamproject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rvl-8i-AYR">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rfm-IM-Vgd">
+                                <rect key="frame" x="16" y="257" width="361" height="219"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GL5-9X-R7c">
+                                <rect key="frame" x="93" y="100" width="214" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="KW4-II-PEc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="qaS-ki-WTY"/>
+                    <connections>
+                        <outlet property="appidtest" destination="GL5-9X-R7c" id="Csu-oC-Px9"/>
+                        <outlet property="dimgView" destination="Rfm-IM-Vgd" id="83a-7b-SJE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AXw-ue-bqD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2737" y="4"/>
+            <point key="canvasLocation" x="2669.4656488549617" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

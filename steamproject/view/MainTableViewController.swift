@@ -34,6 +34,19 @@ class MainTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+
+//    // 데이터 넘겨주기 sgDetail <- 지정해놓은 세그 이름
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Detail" {
+            let cell = sender as! MainTableViewCell
+            if let indexPath = tvListView.indexPath(for: cell) {
+                let detailView = segue.destination as! DetailViewController
+                detailView.appid = feedItem[indexPath.row].appid
+              
+            }
+        }
+    }
 
     // MARK: - Table view data source
     // 테이블 컬럼의 갯수

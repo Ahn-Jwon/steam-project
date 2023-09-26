@@ -43,11 +43,14 @@ class MainTableViewController: UITableViewController {
             if let indexPath = tvListView.indexPath(for: cell) {
                 let detailView = segue.destination as! DetailViewController
                 detailView.appid = feedItem[indexPath.row].appid
-                
-              
+                detailView.gametitle = feedItem[indexPath.row].sname
+                detailView.gamePrice = feedItem[indexPath.row].sprice
+
+                detailView.imgURL = "https://cdn.cloudflare.steamstatic.com/steam/apps/\(feedItem[indexPath.row].appid)/header.jpg"
             }
         }
     }
+    
 
     // MARK: - Table view data source
     // 테이블 컬럼의 갯수

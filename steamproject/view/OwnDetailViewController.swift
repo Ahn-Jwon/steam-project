@@ -39,9 +39,11 @@ class OwnDetailViewController: UIViewController {
     
 
    // appid를 UILabel에 표시
-//   if let appid = appid {
-//       lblAppid.text = "App ID: " + appid
-//   }
+    if let appid = appid {
+        lblAppid.text = "App ID: \(appid)"
+        print(appid)
+    }
+
    
    // appid를 UILabel에 표시
    if let gametitle = gametitle {

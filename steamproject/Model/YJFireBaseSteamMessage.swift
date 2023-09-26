@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct FireBaseSteamMessage{
+    static var img_link: String = ""
+    static var name: String = ""
+    static var price: String = ""
+}

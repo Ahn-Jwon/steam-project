@@ -30,6 +30,24 @@
 		C3BB77B52AB81BB1004B0049 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BB77B42AB81BB1004B0049 /* DetailViewController.swift */; };
 		C3E1C9852ABAD559006F51A4 /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = C3E1C9842ABAD559006F51A4 /* login.png */; };
 		C3E1C9872ABC782A006F51A4 /* loding.png in Resources */ = {isa = PBXBuildFile; fileRef = C3E1C9862ABC782A006F51A4 /* loding.png */; };
+		E0681C2F2AC2B26D00864BB9 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = E0681C2E2AC2B26D00864BB9 /* FirebaseAnalytics */; };
+		E0681C312AC2B26D00864BB9 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = E0681C302AC2B26D00864BB9 /* FirebaseDatabase */; };
+		E0681C332AC2B26D00864BB9 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = E0681C322AC2B26D00864BB9 /* FirebaseFirestore */; };
+		E0681C352AC2B91400864BB9 /* YJsteamJSONModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0681C342AC2B91400864BB9 /* YJsteamJSONModel.swift */; };
+		E0681C372AC2B93B00864BB9 /* YJsteamDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0681C362AC2B93B00864BB9 /* YJsteamDBModel.swift */; };
+		E0681C3A2AC2B9C100864BB9 /* YJsteamQueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0681C392AC2B9C100864BB9 /* YJsteamQueryModel.swift */; };
+		E0681C3D2AC2B9EF00864BB9 /* YJheaderImageQueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0681C3C2AC2B9EF00864BB9 /* YJheaderImageQueryModel.swift */; };
+		E0681C3F2AC2BA3500864BB9 /* YJsteamUserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0681C3E2AC2BA3500864BB9 /* YJsteamUserInfoModel.swift */; };
+		E0681C412AC2BAC700864BB9 /* YJFireBaseSteamDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0681C402AC2BAC700864BB9 /* YJFireBaseSteamDBModel.swift */; };
+		E0681C432AC2BAE200864BB9 /* YJFireBaseSteamMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0681C422AC2BAE200864BB9 /* YJFireBaseSteamMessage.swift */; };
+		E0681C452AC2BB0800864BB9 /* YJFireBaseSteamInsertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0681C442AC2BB0800864BB9 /* YJFireBaseSteamInsertModel.swift */; };
+		E0681C472AC2BB5200864BB9 /* YJFireBaseSteamQueryModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0681C462AC2BB5200864BB9 /* YJFireBaseSteamQueryModelProtocol.swift */; };
+		E0681C492AC2BC6400864BB9 /* YJSteamGameInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0681C482AC2BC6400864BB9 /* YJSteamGameInfoViewController.swift */; };
+		E0681C4D2AC2BD2300864BB9 /* YJsteamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0681C4C2AC2BD2300864BB9 /* YJsteamTableViewController.swift */; };
+		E0681C4F2AC2BE4700864BB9 /* YJsteamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0681C4E2AC2BE4700864BB9 /* YJsteamTableViewCell.swift */; };
+		E0681C512AC2C3E200864BB9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0681C502AC2C3E100864BB9 /* GoogleService-Info.plist */; };
+		E0681C552AC2C5F800864BB9 /* YJFireBaseSteamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0681C542AC2C5F800864BB9 /* YJFireBaseSteamTableViewController.swift */; };
+		E0681C572AC2C7A500864BB9 /* YJFireBaseSteamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0681C562AC2C7A500864BB9 /* YJFireBaseSteamTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +76,21 @@
 		C3BB77B42AB81BB1004B0049 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C3E1C9842ABAD559006F51A4 /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login.png; sourceTree = "<group>"; };
 		C3E1C9862ABC782A006F51A4 /* loding.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loding.png; sourceTree = "<group>"; };
+		E0681C342AC2B91400864BB9 /* YJsteamJSONModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YJsteamJSONModel.swift; sourceTree = "<group>"; };
+		E0681C362AC2B93B00864BB9 /* YJsteamDBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YJsteamDBModel.swift; sourceTree = "<group>"; };
+		E0681C392AC2B9C100864BB9 /* YJsteamQueryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YJsteamQueryModel.swift; sourceTree = "<group>"; };
+		E0681C3C2AC2B9EF00864BB9 /* YJheaderImageQueryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YJheaderImageQueryModel.swift; sourceTree = "<group>"; };
+		E0681C3E2AC2BA3500864BB9 /* YJsteamUserInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YJsteamUserInfoModel.swift; sourceTree = "<group>"; };
+		E0681C402AC2BAC700864BB9 /* YJFireBaseSteamDBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YJFireBaseSteamDBModel.swift; sourceTree = "<group>"; };
+		E0681C422AC2BAE200864BB9 /* YJFireBaseSteamMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YJFireBaseSteamMessage.swift; sourceTree = "<group>"; };
+		E0681C442AC2BB0800864BB9 /* YJFireBaseSteamInsertModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YJFireBaseSteamInsertModel.swift; sourceTree = "<group>"; };
+		E0681C462AC2BB5200864BB9 /* YJFireBaseSteamQueryModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YJFireBaseSteamQueryModelProtocol.swift; sourceTree = "<group>"; };
+		E0681C482AC2BC6400864BB9 /* YJSteamGameInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YJSteamGameInfoViewController.swift; sourceTree = "<group>"; };
+		E0681C4C2AC2BD2300864BB9 /* YJsteamTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YJsteamTableViewController.swift; sourceTree = "<group>"; };
+		E0681C4E2AC2BE4700864BB9 /* YJsteamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YJsteamTableViewCell.swift; sourceTree = "<group>"; };
+		E0681C502AC2C3E100864BB9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E0681C542AC2C5F800864BB9 /* YJFireBaseSteamTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YJFireBaseSteamTableViewController.swift; sourceTree = "<group>"; };
+		E0681C562AC2C7A500864BB9 /* YJFireBaseSteamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YJFireBaseSteamTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +98,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0681C312AC2B26D00864BB9 /* FirebaseDatabase in Frameworks */,
+				E0681C2F2AC2B26D00864BB9 /* FirebaseAnalytics in Frameworks */,
+				E0681C332AC2B26D00864BB9 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +117,15 @@
 				32B23F4D2AC2A4F200F89DF7 /* OwnJSONModel.swift */,
 				32B23F4F2AC2A51100F89DF7 /* OwnQueryModel.swift */,
 				32B23F512AC2A54B00F89DF7 /* OwnHeaderImageModel.swift */,
+				E0681C342AC2B91400864BB9 /* YJsteamJSONModel.swift */,
+				E0681C362AC2B93B00864BB9 /* YJsteamDBModel.swift */,
+				E0681C392AC2B9C100864BB9 /* YJsteamQueryModel.swift */,
+				E0681C3C2AC2B9EF00864BB9 /* YJheaderImageQueryModel.swift */,
+				E0681C3E2AC2BA3500864BB9 /* YJsteamUserInfoModel.swift */,
+				E0681C402AC2BAC700864BB9 /* YJFireBaseSteamDBModel.swift */,
+				E0681C422AC2BAE200864BB9 /* YJFireBaseSteamMessage.swift */,
+				E0681C442AC2BB0800864BB9 /* YJFireBaseSteamInsertModel.swift */,
+				E0681C462AC2BB5200864BB9 /* YJFireBaseSteamQueryModelProtocol.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -114,6 +159,7 @@
 				C3BB779A2AB7DE56004B0049 /* Assets.xcassets */,
 				C3BB779C2AB7DE56004B0049 /* LaunchScreen.storyboard */,
 				C3BB779F2AB7DE56004B0049 /* Info.plist */,
+				E0681C502AC2C3E100864BB9 /* GoogleService-Info.plist */,
 				C3BB77AB2AB7F49A004B0049 /* MainViewController.swift */,
 			);
 			path = steamproject;
@@ -138,6 +184,11 @@
 				C32012692AB94AAB00DA7360 /* MainTableViewCell.swift */,
 				32B23F532AC2A56A00F89DF7 /* OwnViewController.swift */,
 				32B23F552AC2A91800F89DF7 /* OwnCollectionViewCell.swift */,
+				E0681C482AC2BC6400864BB9 /* YJSteamGameInfoViewController.swift */,
+				E0681C4E2AC2BE4700864BB9 /* YJsteamTableViewCell.swift */,
+				E0681C4C2AC2BD2300864BB9 /* YJsteamTableViewController.swift */,
+				E0681C542AC2C5F800864BB9 /* YJFireBaseSteamTableViewController.swift */,
+				E0681C562AC2C7A500864BB9 /* YJFireBaseSteamTableViewCell.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -158,6 +209,11 @@
 			dependencies = (
 			);
 			name = steamproject;
+			packageProductDependencies = (
+				E0681C2E2AC2B26D00864BB9 /* FirebaseAnalytics */,
+				E0681C302AC2B26D00864BB9 /* FirebaseDatabase */,
+				E0681C322AC2B26D00864BB9 /* FirebaseFirestore */,
+			);
 			productName = steamproject;
 			productReference = C3BB778E2AB7DE52004B0049 /* steamproject.app */;
 			productType = "com.apple.product-type.application";
@@ -186,6 +242,9 @@
 				Base,
 			);
 			mainGroup = C3BB77852AB7DE52004B0049;
+			packageReferences = (
+				E0681C2D2AC2B26D00864BB9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = C3BB778F2AB7DE52004B0049 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -206,6 +265,7 @@
 				C3BB779E2AB7DE56004B0049 /* LaunchScreen.storyboard in Resources */,
 				C3BB779B2AB7DE56004B0049 /* Assets.xcassets in Resources */,
 				C3BB77992AB7DE52004B0049 /* Main.storyboard in Resources */,
+				E0681C512AC2C3E200864BB9 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,21 +276,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0681C552AC2C5F800864BB9 /* YJFireBaseSteamTableViewController.swift in Sources */,
 				C3BB77B52AB81BB1004B0049 /* DetailViewController.swift in Sources */,
 				32B23F562AC2A91800F89DF7 /* OwnCollectionViewCell.swift in Sources */,
 				C3BB77A92AB7E83E004B0049 /* LoginViewController.swift in Sources */,
+				E0681C352AC2B91400864BB9 /* YJsteamJSONModel.swift in Sources */,
 				32B23F522AC2A54B00F89DF7 /* OwnHeaderImageModel.swift in Sources */,
+				E0681C472AC2BB5200864BB9 /* YJFireBaseSteamQueryModelProtocol.swift in Sources */,
 				C32012702AB967D200DA7360 /* MainDBModel.swift in Sources */,
 				C32012742AB96D2500DA7360 /* MainJSONModel.swift in Sources */,
 				32B23F542AC2A56A00F89DF7 /* OwnViewController.swift in Sources */,
 				C3BB77962AB7DE52004B0049 /* ViewController.swift in Sources */,
+				E0681C372AC2B93B00864BB9 /* YJsteamDBModel.swift in Sources */,
+				E0681C432AC2BAE200864BB9 /* YJFireBaseSteamMessage.swift in Sources */,
+				E0681C412AC2BAC700864BB9 /* YJFireBaseSteamDBModel.swift in Sources */,
+				E0681C3D2AC2B9EF00864BB9 /* YJheaderImageQueryModel.swift in Sources */,
+				E0681C492AC2BC6400864BB9 /* YJSteamGameInfoViewController.swift in Sources */,
 				C320126A2AB94AAB00DA7360 /* MainTableViewCell.swift in Sources */,
 				32B23F4A2AC2A4C500F89DF7 /* OwnModel.swift in Sources */,
 				C3BB77922AB7DE52004B0049 /* AppDelegate.swift in Sources */,
 				C3BB77942AB7DE52004B0049 /* SceneDelegate.swift in Sources */,
+				E0681C452AC2BB0800864BB9 /* YJFireBaseSteamInsertModel.swift in Sources */,
+				E0681C3A2AC2B9C100864BB9 /* YJsteamQueryModel.swift in Sources */,
+				E0681C4D2AC2BD2300864BB9 /* YJsteamTableViewController.swift in Sources */,
+				E0681C3F2AC2BA3500864BB9 /* YJsteamUserInfoModel.swift in Sources */,
 				C3BB77AE2AB7F6A5004B0049 /* MainTableViewController.swift in Sources */,
 				C3BB77AC2AB7F49A004B0049 /* MainViewController.swift in Sources */,
 				32B23F502AC2A51100F89DF7 /* OwnQueryModel.swift in Sources */,
+				E0681C572AC2C7A500864BB9 /* YJFireBaseSteamTableViewCell.swift in Sources */,
+				E0681C4F2AC2BE4700864BB9 /* YJsteamTableViewCell.swift in Sources */,
 				32B23F4E2AC2A4F200F89DF7 /* OwnJSONModel.swift in Sources */,
 				C32012722AB96A2900DA7360 /* MainQueryModel.swift in Sources */,
 			);
@@ -450,6 +524,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E0681C2D2AC2B26D00864BB9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E0681C2E2AC2B26D00864BB9 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E0681C2D2AC2B26D00864BB9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		E0681C302AC2B26D00864BB9 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E0681C2D2AC2B26D00864BB9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		E0681C322AC2B26D00864BB9 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E0681C2D2AC2B26D00864BB9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C3BB77862AB7DE52004B0049 /* Project object */;
 }

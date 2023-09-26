@@ -9,6 +9,10 @@ import UIKit
 
 class YJFireBaseSteamTableViewCell: UITableViewCell {
 
+    
+    @IBOutlet weak var imgGameImg: UIImageView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

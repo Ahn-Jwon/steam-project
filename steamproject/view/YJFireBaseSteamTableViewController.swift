@@ -6,8 +6,17 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseCore
 
 class YJFireBaseSteamTableViewController: UITableViewController {
+    
+    @IBOutlet var firebaseSteamView: UITableView!
+    
+    
+
+    var firebaseSteamListView : [FireBaseSteamDBModel] = []
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,27 +28,58 @@ class YJFireBaseSteamTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
+    
+    override func viewWillAppear(_ animated: Bool) {
+        readVales()
+    }
+    
+    func readVales(){
+        let firebaseSteamQueryModel1 = firebaseSteamQueryModel()
+        firebaseSteamQueryModel1.delegate = self
+        firebaseSteamQueryModel1.firebaseDowmloadItems()
+    }
+    
+    
+    
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return firebaseSteamListView.count
     }
 
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        // Configure the cell...
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
+        
+        var content = cell.defaultContentConfiguration()
+        // content.text = firebaseSteamListView[indexPath.row].name
+        
+        // content.text = firebaseSteamListView[indexPath.row].price
+        
+        if let imageUrl = URL(string: firebaseSteamListView[indexPath.row].img_link){
+            URLSession.shared.dataTask(with: imageUrl) { data, response, error in
+                guard let data = data, error == nil else { return }
+                DispatchQueue.main.async {
+                    if let image = UIImage(data: data) {
+                        content.image = image
+                        cell.contentConfiguration = content
+                    }
+                }
+            }.resume()
+        }
+        
+        
 
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.
@@ -57,7 +97,7 @@ class YJFireBaseSteamTableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
     */
 
@@ -86,4 +126,11 @@ class YJFireBaseSteamTableViewController: UITableViewController {
     }
     */
 
+}
+extension YJFireBaseSteamTableViewController: FireBaseSteamQueryModelProtocol{
+    func steamItemDowmLoaded(items: [FireBaseSteamDBModel]) {
+        firebaseSteamListView = items
+        self.firebaseSteamView.reloadData()
+    }
+    
 }

@@ -22,8 +22,6 @@
 		C3BB77AC2AB7F49A004B0049 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BB77AB2AB7F49A004B0049 /* MainViewController.swift */; };
 		C3BB77AE2AB7F6A5004B0049 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BB77AD2AB7F6A5004B0049 /* MainTableViewController.swift */; };
 		C3BB77B52AB81BB1004B0049 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BB77B42AB81BB1004B0049 /* DetailViewController.swift */; };
-		C3C227702AC2675700F495AB /* pickCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C2276F2AC2675700F495AB /* pickCollectionViewController.swift */; };
-		C3C227722AC2677800F495AB /* OwnTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C227712AC2677800F495AB /* OwnTableViewController.swift */; };
 		C3E1C9852ABAD559006F51A4 /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = C3E1C9842ABAD559006F51A4 /* login.png */; };
 		C3E1C9872ABC782A006F51A4 /* loding.png in Resources */ = {isa = PBXBuildFile; fileRef = C3E1C9862ABC782A006F51A4 /* loding.png */; };
 /* End PBXBuildFile section */
@@ -46,8 +44,6 @@
 		C3BB77AB2AB7F49A004B0049 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		C3BB77AD2AB7F6A5004B0049 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		C3BB77B42AB81BB1004B0049 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		C3C2276F2AC2675700F495AB /* pickCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pickCollectionViewController.swift; sourceTree = "<group>"; };
-		C3C227712AC2677800F495AB /* OwnTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnTableViewController.swift; sourceTree = "<group>"; };
 		C3E1C9842ABAD559006F51A4 /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login.png; sourceTree = "<group>"; };
 		C3E1C9862ABC782A006F51A4 /* loding.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loding.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,8 +120,6 @@
 				C3BB77A82AB7E83E004B0049 /* LoginViewController.swift */,
 				C3BB77B42AB81BB1004B0049 /* DetailViewController.swift */,
 				C32012692AB94AAB00DA7360 /* MainTableViewCell.swift */,
-				C3C2276F2AC2675700F495AB /* pickCollectionViewController.swift */,
-				C3C227712AC2677800F495AB /* OwnTableViewController.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -207,7 +201,6 @@
 				C3BB77B52AB81BB1004B0049 /* DetailViewController.swift in Sources */,
 				C3BB77A92AB7E83E004B0049 /* LoginViewController.swift in Sources */,
 				C32012702AB967D200DA7360 /* MainDBModel.swift in Sources */,
-				C3C227702AC2675700F495AB /* pickCollectionViewController.swift in Sources */,
 				C32012742AB96D2500DA7360 /* MainJSONModel.swift in Sources */,
 				C3BB77962AB7DE52004B0049 /* ViewController.swift in Sources */,
 				C320126A2AB94AAB00DA7360 /* MainTableViewCell.swift in Sources */,
@@ -216,7 +209,6 @@
 				C3BB77AE2AB7F6A5004B0049 /* MainTableViewController.swift in Sources */,
 				C3BB77AC2AB7F49A004B0049 /* MainViewController.swift in Sources */,
 				C32012722AB96A2900DA7360 /* MainQueryModel.swift in Sources */,
-				C3C227722AC2677800F495AB /* OwnTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

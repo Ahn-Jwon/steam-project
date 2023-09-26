@@ -43,6 +43,7 @@ class MainTableViewController: UITableViewController {
             if let indexPath = tvListView.indexPath(for: cell) {
                 let detailView = segue.destination as! DetailViewController
                 detailView.appid = feedItem[indexPath.row].appid
+                
               
             }
         }

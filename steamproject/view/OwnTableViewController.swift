@@ -2,7 +2,7 @@
 //  OwnTableViewController.swift
 //  steamproject
 //
-//  Created by AHNJAEWON1 on 2023/09/18.
+//  Created by AHNJAEWON1 on 2023/09/26.
 //
 
 import UIKit

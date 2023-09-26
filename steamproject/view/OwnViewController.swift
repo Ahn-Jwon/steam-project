@@ -6,13 +6,14 @@
 //
 
 import UIKit
+import SwiftUI
 
 class OwnViewController: UIViewController {
 
     @IBOutlet var UserListCollectionView: UICollectionView!
     var dataArray: [UserModel] = []
-        var IMGArray: [IMGModel] = []
-
+    var IMGArray: [IMGModel] = []
+    let cellMarginSize: CGFloat = 10.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,8 @@ class OwnViewController: UIViewController {
                steamQueryModel.steamDownloadItems(limit:25)
                UserListCollectionView.delegate = self
                UserListCollectionView.dataSource = self
+        
+        
 }
     // 상세페이지 넘어가는 데이터 코드
     //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -51,6 +54,8 @@ class OwnViewController: UIViewController {
             // Pass the selected object to the new view controller.
         }
         */
+
+
 
     extension OwnViewController: UICollectionViewDataSource, UICollectionViewDelegate{
         
@@ -88,13 +93,14 @@ class OwnViewController: UIViewController {
 
 
         extension OwnViewController: UICollectionViewDelegateFlowLayout{
+           
         // 위아래 간격
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-            return 1
+            return 0
         }
         // 좌우간 간격
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-            return 1
+            return 0
         }
         
         // Cell Size (옆 라인을 고려하여 설정)
@@ -103,7 +109,12 @@ class OwnViewController: UIViewController {
             let size = CGSize(width: width, height: width)
             return size
         }
-            
+            // 섹션에서 콘텐츠를 배치하는 데 사용되는 여백
+//            func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+//                return UIEdgeInsets(top: 15, left: 10, bottom: 10, right: 10)
+//            }
+        
+       
     }
 
     extension OwnViewController: UserQueryModelProtocol, OwnHeaderImageModelProtocol{

@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ofg-CX-Rm8">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -65,7 +65,7 @@
                     <connections>
                         <segue destination="VLb-87-vNw" kind="relationship" relationship="viewControllers" id="W0b-Ky-mhE"/>
                         <segue destination="O9S-08-ty4" kind="relationship" relationship="viewControllers" id="1RP-Mx-xcM"/>
-                        <segue destination="6V2-ra-sj0" kind="relationship" relationship="viewControllers" id="e5H-9K-3Mu"/>
+                        <segue destination="v6V-WE-iap" kind="relationship" relationship="viewControllers" id="e5H-9K-3Mu"/>
                         <segue destination="YH0-tV-Xea" kind="relationship" relationship="viewControllers" id="3Ug-Cm-x5W"/>
                     </connections>
                 </tabBarController>
@@ -139,22 +139,47 @@
             </objects>
             <point key="canvasLocation" x="1601" y="4"/>
         </scene>
-        <!--추천목록-->
+        <!--Steam 추천 게임-->
         <scene sceneID="q8k-Bz-biG">
             <objects>
-                <tableViewController id="6V2-ra-sj0" customClass="OwnTableViewController" customModule="steamproject" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="6V2-ra-sj0" customClass="YJsteamTableViewController" customModule="steamproject" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="bGR-Yx-vHh">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pe0-R0-ksS">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="R2U-dq-8TY">
-                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" rowHeight="130" id="R2U-dq-8TY" customClass="YJsteamTableViewCell" customModule="steamproject" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="94" width="393" height="130"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="R2U-dq-8TY" id="tAj-0f-qW5">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="130"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NNE-FS-0MH">
+                                            <rect key="frame" x="0.0" y="97" width="393" height="33"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ikC-dC-5fO">
+                                            <rect key="frame" x="0.0" y="1" width="393" height="96"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imgImg_icon_urlView" destination="ikC-dC-5fO" id="X1f-iX-Fpn"/>
+                                    <outlet property="lblNameView" destination="NNE-FS-0MH" id="ihy-NT-Mlu"/>
+                                    <segue destination="UIu-T1-qiu" kind="show" identifier="sgDetail" id="uyD-y6-NqW"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -162,11 +187,147 @@
                             <outlet property="delegate" destination="6V2-ra-sj0" id="3Ze-bf-r1R"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="추천목록" id="UkW-XL-u2f"/>
+                    <navigationItem key="navigationItem" title="Steam 추천 게임" id="9nW-mh-26T">
+                        <barButtonItem key="rightBarButtonItem" title="추천 게임 목록" id="e21-Rt-lQg">
+                            <connections>
+                                <segue destination="BLN-zr-bDb" kind="show" id="Ogx-wA-idv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="lblUser" destination="pe0-R0-ksS" id="J5b-pn-ls1"/>
+                        <outlet property="steamListTableView" destination="bGR-Yx-vHh" id="Fmw-JO-4DV"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lqv-wk-jAd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1612" y="720"/>
+            <point key="canvasLocation" x="3150.3816793893129" y="790.84507042253529"/>
+        </scene>
+        <!--추천 게임 목록-->
+        <scene sceneID="g9U-7o-3MN">
+            <objects>
+                <tableViewController id="BLN-zr-bDb" customClass="YJFireBaseSteamTableViewController" customModule="steamproject" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="1IV-XQ-b5P">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FHe-rw-T7K">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" rowHeight="130" id="AvR-p7-8Mp" customClass="YJFireBaseSteamTableViewCell" customModule="steamproject" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="94" width="393" height="130"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AvR-p7-8Mp" id="x7E-n1-zJg">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="130"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ALP-dt-wls">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="130"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imgGameImg" destination="ALP-dt-wls" id="s0u-ti-GMb"/>
+                                    <segue destination="3yt-rb-pfL" kind="show" id="pVh-KZ-SEZ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="BLN-zr-bDb" id="JWy-qD-pF8"/>
+                            <outlet property="delegate" destination="BLN-zr-bDb" id="JQs-gt-rar"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="추천 게임 목록" id="yJb-cw-xh3"/>
+                    <connections>
+                        <outlet property="firebaseSteamView" destination="1IV-XQ-b5P" id="DE7-pC-gAj"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Wc-Df-JBr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3983.969465648855" y="790.84507042253529"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="AX6-Mb-KNl">
+            <objects>
+                <viewController id="3yt-rb-pfL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l3h-m8-GjD">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9UB-1t-Yk5">
+                                <rect key="frame" x="0.0" y="120" width="393" height="476"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJD-IP-p8u">
+                                <rect key="frame" x="0.0" y="632" width="393" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TyI-ss-nBZ">
+                                <rect key="frame" x="0.0" y="692" width="393" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="glV-Ti-sfo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cax-Ns-tO6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9HD-yy-vky" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4837" y="791"/>
+        </scene>
+        <!--Steam Game Info View Controller-->
+        <scene sceneID="gEg-q8-zYt">
+            <objects>
+                <viewController id="UIu-T1-qiu" customClass="YJSteamGameInfoViewController" customModule="steamproject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V4g-h5-oaq">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1CF-q6-3IJ">
+                                <rect key="frame" x="0.0" y="635" width="393" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qT-5X-gEA">
+                                <rect key="frame" x="0.0" y="695" width="393" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wNm-Bi-x1x">
+                                <rect key="frame" x="0.0" y="123" width="393" height="476"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xxR-Ir-SJ8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4jc-R7-IRu"/>
+                    <connections>
+                        <outlet property="imgFirebaseStream" destination="wNm-Bi-x1x" id="dRY-Yh-Gyv"/>
+                        <outlet property="lblFirebaseStreamName" destination="1CF-q6-3IJ" id="8eE-dD-BnX"/>
+                        <outlet property="lblFirebaseStreamPrice" destination="1qT-5X-gEA" id="t3H-0W-uyV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ib0-fv-yfk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3148.8549618320608" y="1535.9154929577467"/>
         </scene>
         <!--보유목록-->
         <scene sceneID="0dr-fi-TgX">
@@ -252,6 +413,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AXw-ue-bqD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2669.4656488549617" y="3.5211267605633805"/>
+        </scene>
+        <!--추천목록-->
+        <scene sceneID="yHS-gP-JFo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="v6V-WE-iap" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="추천목록" id="UkW-XL-u2f"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pFH-Yw-S3C">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6V2-ra-sj0" kind="relationship" relationship="rootViewController" id="CjT-Od-0aT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vv2-5v-atQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2223.6641221374043" y="790.84507042253529"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

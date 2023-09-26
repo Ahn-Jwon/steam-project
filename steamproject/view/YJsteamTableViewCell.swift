@@ -9,6 +9,12 @@ import UIKit
 
 class YJsteamTableViewCell: UITableViewCell {
 
+    
+    @IBOutlet weak var imgImg_icon_urlView: UIImageView!
+    
+    @IBOutlet weak var lblNameView: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

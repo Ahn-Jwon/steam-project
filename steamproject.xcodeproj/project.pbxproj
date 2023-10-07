@@ -50,6 +50,7 @@
 		E0681C512AC2C3E200864BB9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0681C502AC2C3E100864BB9 /* GoogleService-Info.plist */; };
 		E0681C552AC2C5F800864BB9 /* YJFireBaseSteamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0681C542AC2C5F800864BB9 /* YJFireBaseSteamTableViewController.swift */; };
 		E0681C572AC2C7A500864BB9 /* YJFireBaseSteamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0681C562AC2C7A500864BB9 /* YJFireBaseSteamTableViewCell.swift */; };
+		E07E7D9C2AD1E3A300D3830E /* YJFirebaseSteamGameInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07E7D9B2AD1E3A300D3830E /* YJFirebaseSteamGameInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +96,7 @@
 		E0681C502AC2C3E100864BB9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E0681C542AC2C5F800864BB9 /* YJFireBaseSteamTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YJFireBaseSteamTableViewController.swift; sourceTree = "<group>"; };
 		E0681C562AC2C7A500864BB9 /* YJFireBaseSteamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YJFireBaseSteamTableViewCell.swift; sourceTree = "<group>"; };
+		E07E7D9B2AD1E3A300D3830E /* YJFirebaseSteamGameInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YJFirebaseSteamGameInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 				E0681C4C2AC2BD2300864BB9 /* YJsteamTableViewController.swift */,
 				E0681C542AC2C5F800864BB9 /* YJFireBaseSteamTableViewController.swift */,
 				E0681C562AC2C7A500864BB9 /* YJFireBaseSteamTableViewCell.swift */,
+				E07E7D9B2AD1E3A300D3830E /* YJFirebaseSteamGameInfoViewController.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				32B23F562AC2A91800F89DF7 /* OwnCollectionViewCell.swift in Sources */,
 				C3BB77A92AB7E83E004B0049 /* LoginViewController.swift in Sources */,
 				E0681C352AC2B91400864BB9 /* YJsteamJSONModel.swift in Sources */,
+				E07E7D9C2AD1E3A300D3830E /* YJFirebaseSteamGameInfoViewController.swift in Sources */,
 				32B23F522AC2A54B00F89DF7 /* OwnHeaderImageModel.swift in Sources */,
 				E0681C472AC2BB5200864BB9 /* YJFireBaseSteamQueryModelProtocol.swift in Sources */,
 				C32012702AB967D200DA7360 /* MainDBModel.swift in Sources */,

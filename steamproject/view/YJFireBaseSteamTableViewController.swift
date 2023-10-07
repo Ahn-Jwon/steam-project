@@ -126,6 +126,20 @@ class YJFireBaseSteamTableViewController: UITableViewController {
     }
     */
 
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "sgDetail" {
+            if let cell = sender as? UITableViewCell,
+               let indexPath = self.firebaseSteamView.indexPath(for: cell) {
+                FireBaseSteamMessage.img_link = firebaseSteamListView[indexPath.row].img_link
+                FireBaseSteamMessage.name = firebaseSteamListView[indexPath.row].name
+                FireBaseSteamMessage.price = firebaseSteamListView[indexPath.row].price
+            }
+        }
+    }
+    
+    
 }
 extension YJFireBaseSteamTableViewController: FireBaseSteamQueryModelProtocol{
     func steamItemDowmLoaded(items: [FireBaseSteamDBModel]) {

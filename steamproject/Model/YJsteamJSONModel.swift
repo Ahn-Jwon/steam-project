@@ -7,14 +7,12 @@
 
 import Foundation
 
-struct SteamResult: Codable{
-    let games: [SteamJSON]
+struct SteamResult: Codable {
+    let result: SteamJSON
 }
 
-struct SteamJSON: Codable{
-    var appid: Int
-    var img_icon_url: String
-    var name: String
+struct SteamJSON: Codable {
+    let appid: [String]
 }
 
 struct headerImageResult: Codable {
@@ -24,6 +22,7 @@ struct headerImageResult: Codable {
 struct headerImageJSON: Codable {
     let img_link: String
     let price: String
+    let name: String
 }
 
 

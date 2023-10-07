@@ -65,7 +65,7 @@ class headerImageQueryModel {
         do {
             let headerImages = try decoder.decode(headerImageResult.self, from: data)
             let headerImage = headerImages.result
-            let query = headerImageDBModel(img_link: headerImage.img_link, price: headerImage.price)
+            let query = headerImageDBModel(img_link: headerImage.img_link, price: headerImage.price, name: headerImage.name)
             locations.append(query)
             print("성공 3 : \(headerImage.img_link) , \(headerImage.price) ")
         } catch let error {

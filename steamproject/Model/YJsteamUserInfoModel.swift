@@ -14,7 +14,7 @@ protocol steamUserInfoModelProtocol {
 class steamUserInfoModel {
     var delegate: steamUserInfoModelProtocol!
 
-    let urlPath = "http://flask.okrie.kro.kr:5000/user/getuser?steamid=76561199337037872"
+    let urlPath = "http://flask.okrie.kro.kr:5000/user/getuser?steamid=76561198155183238"
 
     func steamUserInfoItems() {
         let url = URL(string: urlPath)!
